@@ -1,23 +1,50 @@
-// src/components/Login.js
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import Button from './Button';  // Correct import statement
+import Button from './Button';
 
 const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+
+  const handleLogin = () => {
+    if (username === 'Catie' && password === 'CFG') {
+      dispatch({ type: 'LOGIN_SUCCESS' });
+      navigate('/welcome', { state: { username } });
+    } else {
+      dispatch({ type: 'LOGIN_ERROR' });
+      navigate('/login-error');
+    }
+  };
+
   return (
     <div className="login-container">
       <div className="login-form">
         <h2>Welcome to Prehistory!</h2>
         <form>
           <label htmlFor="username">Username:</label>
-          <input type="text" id="username" name="username" />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
 
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
-          <Button onClick={() => console.log('Login clicked')}>
-            Login
-          </Button>
+          <Button onClick={handleLogin}>Login</Button>
         </form>
       </div>
     </div>
