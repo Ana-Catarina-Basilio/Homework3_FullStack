@@ -1,7 +1,7 @@
-import './Login.css';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 import Button from './Button';
 
 const Login = () => {
@@ -9,7 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const loginError = useSelector((state) => state.loginError);
+
 
   const handleLogin = () => {
     if (username === 'Catie' && password === 'CFG') {
@@ -46,13 +46,9 @@ const Login = () => {
 
           <Button onClick={handleLogin}>Login</Button>
         </form>
-        {loginError && <p className="error-message">Incorrect username or password</p>}
       </div>
     </div>
-
   );
 };
 
 export default Login;
-
-
