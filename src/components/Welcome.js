@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter as Router
 import Button from './Button';
 import './Login.css';
 
@@ -16,10 +16,11 @@ const Welcome = () => {
   };
 
   return (
-      <div className="login-container"> 
+    <Router> {/* Use Router component here */}
+      <div className="login-container">
         <div className="login-form">
           <h2 className='welcome'>Welcome, {username}!</h2>
-          <p className= "curiosity"> Here is a curiosity about a stonehenge burial: The Archer wore animal skins fashioned into a cloak and was buried with pottery made locally!</p>
+          <p className="curiosity"> Here is a curiosity about a stonehenge burial: The Archer wore animal skins fashioned into a cloak and was buried with pottery made locally!</p>
           <img className='Archer'
             src={process.env.PUBLIC_URL + '/Amesbury.jpeg'}
             alt="Amesbury Archer"
@@ -29,6 +30,7 @@ const Welcome = () => {
           </form>
         </div>
       </div>
+    </Router>
   );
 };
 

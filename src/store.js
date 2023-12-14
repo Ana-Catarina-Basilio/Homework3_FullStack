@@ -3,6 +3,7 @@ import { createStore } from 'redux';
 const initialState = {
   isLoggedIn: false,
   loginError: false,
+  username: null,
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -12,7 +13,7 @@ const rootReducer = (state = initialState, action) => {
     case 'LOGIN_ERROR':
       return { ...state, isLoggedIn: false, loginError: true };
     case 'LOGOUT':
-      return { ...state, isLoggedIn: false, loginError: false };
+      return { ...state, isLoggedIn: false, loginError: false, username: null };
     default:
       return state;
   }
