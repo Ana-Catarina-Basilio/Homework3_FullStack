@@ -7,7 +7,6 @@ To check the demo, go to the Screenshots-recording folder and download the .webm
 
 <h5>Homescreen</h5>
 
-
 ![homescreen](https://github.com/Ana-Catarina-Basilio/React_Redux-LogIn_LogOut/blob/master/Screenshots-recording/Homescreen.JPG)
 
 <h5>LogIn</h5>
@@ -15,4 +14,6 @@ To check the demo, go to the Screenshots-recording folder and download the .webm
 ![LogIn](https://github.com/Ana-Catarina-Basilio/React_Redux-LogIn_LogOut/blob/master/Screenshots-recording/LoginCorrect.JPG)
 
 <h5>Error</h5>
-![Error](https://github.com/Ana-Catarina-Basilio/React_Redux-LogIn_LogOut/blob/master/Screenshots-recording/LoginError.JPG)
+
+![LogIn](https://github.com/Ana-Catarina-Basilio/React_Redux-LogIn_LogOut/blob/master/Screenshots-recording/LoginError.JPG) 
+
