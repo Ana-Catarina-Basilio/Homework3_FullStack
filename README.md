@@ -4,6 +4,7 @@ Simple React web application that manages user login and logout. The state is up
 
 <h3>Screenshots & Demo</h3>
 To check the demo, go to the Screenshots-recording folder and download the .webm file. 
+<br>
 
 ![homescreen](https://github.com/Ana-Catarina-Basilio/React_Redux-LogIn_LogOut/blob/master/Screenshots-recording/Homescreen.JPG)
 
